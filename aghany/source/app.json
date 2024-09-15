@@ -1,0 +1,82 @@
+{
+    "name": "『Revor』『Musíc』",
+    "description": "بوت تشغيل الموسيقي والفديو في لالمحادثة الصوتيى",
+    "logo": "https://telegra.ph/file/4c7636b9c50116387d9f6.jpg",
+    "keywords": [
+        "محادثات صوتية",
+        "بوتات تيلجرام",
+        "تشغيل فديو",
+        "بايروجرام"
+    ],
+    "website": "https://t.me/revorb0t",
+    "repository": "https://github.com/Dev3yad/revormusic",
+    "success_url": "https://t.me/rev0r",
+    "env": {
+        "API_ID": {
+            "description": "api id تستطيع جلبه من my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "api hash تستطيع جلبه من.telegram.org",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "التوكن اللخاص بك من @BotFather",
+            "required": true
+        },
+        "ALIVE_IMG": {
+            "description": "صوره السورس",
+            "required": false
+        },
+        "SUBSCRIBE": {
+            "description": "الاشتراك الاجباري",
+            "required": false
+        },
+        "SESSION_NAME": {
+            "description": "جلسة البايروجرام",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "ايدي المطورين",
+            "required": false
+        },
+        "UPDATES_CHANNEL": {
+            "description": "معرف قناتك بدون @",
+            "required": false,
+            "value": "YYYBR"
+        },
+        "BOT_USERNAME": {
+            "description": "معرف البوت",
+            "required": false,
+            "value": "AYVCMusicbot"
+        },
+        "ASSISTANT_USERNAME": {
+            "description": "معرف المساعد",
+            "required": false,
+            "value": ""
+        },
+        "OWNER_NAME": {
+            "description": "معرف المطور بدون @",
+            "required": false
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
